@@ -53,16 +53,16 @@
 		
 		</plugins>
 	</build>
-	<distributionManagement>
-		<repository>
-			<id>central</id>
-			<name>local_RELEASE</name>
-			<url>http://localhost:8081/artifactory/local_RELEASE/</url>
-		</repository>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>local_SNAPSHOT</name>
-			<url>http://localhost:8081/artifactory/local_SNAPSHOT/</url>
-		</snapshotRepository>
-	</distributionManagement>
+	<!-- <distributionManagement> -->
+		<!-- <repository> -->
+			<!-- <id>central</id> -->
+			<!-- <name>local_RELEASE</name> -->
+			<!-- <url>http://localhost:8081/artifactory/local_RELEASE/</url> -->
+		<!-- </repository> -->
+		<!-- <snapshotRepository> -->
+			<!-- <id>snapshots</id> -->
+			<!-- <name>local_SNAPSHOT</name> -->
+			<!-- <url>http://localhost:8081/artifactory/local_SNAPSHOT/</url> -->
+		<!-- </snapshotRepository> -->
+	<!-- </distributionManagement> -->
 </project>
