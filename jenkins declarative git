@@ -6,5 +6,11 @@ pipeline{
             git credentialsId: 'github', url: 'https://github.com/nikhil-patil96/Maven-Project/'
         }
     }
+    
+    stage("deploy-dev"){
+    sshagent(['tomcat-new']) {
+    // some block
+}
+}
  }
 }
