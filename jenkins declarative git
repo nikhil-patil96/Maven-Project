@@ -23,7 +23,7 @@ pipeline{
               sh """
                 scp -o StrictHostKeyChecking=no target/myweb.war ubuntu@172.31.13.127:/home/ubuntu/tomcat
                 
-                ssh ubuntu@172.31.13.127 /home/ubuntu/tomcat/bin/shutdown.sh
+                  ssh ubuntu@172.31.13.127 /home/ubuntu/tomcat/bin/shutdown.sh
                 
                  ssh ubuntu@172.31.13.127 /home/ubuntu/tomcat/bin/startup.sh
                 
