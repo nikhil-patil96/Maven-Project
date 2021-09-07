@@ -18,6 +18,7 @@ pipeline{
         }
     }
     stage("deploy-dev"){
+             steps{
              sshagent(['tomcat-new']) {
               sh """
                 scp -o StrictHostKeyChecking=no target/myweb.war ubuntu@172.31.13.127:/home/ubuntu/tomcat
@@ -27,7 +28,8 @@ pipeline{
                  shh ubuntu@172.31.13.127 /home/ubuntu/tomcat/bin/startup.sh
                 
               """
-}
+             }
+        }
     }
  }
  
