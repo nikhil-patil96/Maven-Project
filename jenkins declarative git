@@ -20,14 +20,12 @@ pipeline{
     stage("deploy-dev"){
              sshagent(['tomcat-new']) {
               sh """
-                scp -o StrictHostKeyChecking=no target/myweb.war ec2-user@172.31.13.127:/home/ubuntu/tomcat
+                scp -o StrictHostKeyChecking=no target/myweb.war ubuntu@172.31.13.127:/home/ubuntu/tomcat
                 
-                shh ec2-user@172.31.13.127 /home/ubuntu/tomcat/bin/shutdown.sh
+                shh ubuntu@172.31.13.127 /home/ubuntu/tomcat/bin/shutdown.sh
                 
-                 shh ec2-user@172.31.13.127 /home/ubuntu/tomcat/bin/startup.sh
+                 shh ubuntu@172.31.13.127 /home/ubuntu/tomcat/bin/startup.sh
                 
-                
-
               """
 }
     }
