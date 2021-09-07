@@ -1,3 +1,6 @@
+currentBuild.displayName = "Calculator-Magic-#"+currentBuild.number
+
+
 pipeline{
     agent any
     environment{
