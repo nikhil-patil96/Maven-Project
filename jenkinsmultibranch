@@ -27,7 +27,14 @@ pipeline {
 		
 			}
 		}
+		
+		stage("Display"){
+	
+				steps {
+					echo 'display the application'
+					
 	
 	}
 }	
-				
+	}
+	}
